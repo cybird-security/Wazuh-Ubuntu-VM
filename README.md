@@ -230,5 +230,5 @@ Make note of the admin password. On Windows, you can use the snipping tool by pr
 
 ## VII. Security Considerations
 
-This setup does not consider server hardening, secure communications, or firewalls.
+This setup does not consider server hardening, secure communications, firewalls, etc. If you are using this guide for sensitive data or in a business/enterprise environment, consult with the necessary people to ensure that the server architecture is secure and the data remains confidential and available to those who require it.
 
