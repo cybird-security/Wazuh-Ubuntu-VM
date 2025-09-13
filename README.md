@@ -1,4 +1,4 @@
-# Wazuh-Ubuntu-VM
+# Wazuh VM Lab Guide
 The following documentation is for setting up Wazuh, an open-source SIEM tool, on a headless Ubuntu Server virtual machine. I wanted to do this project to practice documentation and get some practice with SIEM tools. The scope of this document covers the initial setup of the virtual machines for the Wazuh host. Wazuh agents will be configured later.
 
 ## Table of Contents
