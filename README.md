@@ -240,9 +240,20 @@ INFO: --- Summary --- INFO: You can access the web interface https://<WAZUH_DASH
 ```
 
 Make note of the admin password. On Windows, you can use the snipping tool by pressing `Windows + Shift + S` to take a screenshot of the password. You can change it later.
-2. You will see that it tells you to access the web interface via `https://<WAZUH_DASHBOARD_IP_ADDRESS>`. The Wazuh Dashboard IP address is the IP address of the LAN segment adapter, the one we set during the initial setup of Ubuntu Server; in this guide, we used `192.168.1.1`.  
-	**a.** If you do not have another virtual machine set up, you cannot access the dashboard at the moment. If you do, open a browser and type the following into your URL bar:  
-		`https://<server_ip_here>` | as stated previously, we assigned `192.168.1.1` to the LAN segment, so you would enter `https://192.168.1.1`.  
+2. You will see that it tells you to access the web interface via `https://<WAZUH_DASHBOARD_IP_ADDRESS>`. The Wazuh Dashboard IP address is the IP address of the LAN segment adapter, the one we set during the initial setup of Ubuntu Server; in this guide, we used `192.168.1.1`.
+  
+**a.** If you do not have another virtual machine on the same internal network set up, you cannot access the dashboard at the moment. However, you can verify the status of the dashboard service by executing the following command: `systemctl status wazuh-dashboard`. You should see something like this:
+
+<img width="733" height="49" alt="image" src="https://github.com/user-attachments/assets/aba81b4f-d770-486a-9b93-a9fdd658d261" />
+
+If you do not, and it says "down", "disabled", or "inactive", you can try running the following commands to bring it online:
+`sudo systemctl enable wazuh-dashboard` and/or `sudo systemctl start wazuh-dashboard`
+
+Afterward, try `systemctl status wazuh-dashboard` once more. If it is still disabled or inactive, there is an error in the installation.
+
+**b.** If you have another virtual machine set up, you can access the dashboard by opening a browser and typing the following into your URL bar:  
+	`https://<server_ip_here>` | as stated previously, we assigned `192.168.1.1` to the LAN segment, so you would enter `https://192.168.1.1`.
+  
 3. Wazuh is now installed on your Ubuntu Server VM and is ready to start logging events from agents. See the next document about deploying Wazuh Agents on endpoints you want to observe.
 
 ---
