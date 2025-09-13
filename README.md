@@ -1,6 +1,15 @@
 # Wazuh-Ubuntu-VM
-Documentation for setting up Wazuh, an open-source SIEM tool, on a headless Ubuntu Server virtual machine.
+The following documentation is for setting up Wazuh, an open-source SIEM tool, on a headless Ubuntu Server virtual machine. I wanted to do this project to practice documentation and get some practice with SIEM tools. The scope of this document covers the initial setup of the virtual machines for the Wazuh host. Wazuh agents will be configured later.
 
+## Table of Contents
+
+- [I. Requirements](#i-requirements)
+- [II. Preliminary Steps](#ii-preliminary-steps)
+- [III. Virtual Machine Configuration](#iii-virtual-machine-configuration)
+- [IV. Ubuntu Server Configuration](#iv-ubuntu-server-configuration)
+- [V. Network Configuration (Optional)](#v-network-configuration-optional---if-using-a-default-gateway-in-lan-segment)
+- [VI. Wazuh Installation](#vi-wazuh-installation)
+- [VII. Security Considerations](#vii-security-considerations)
 ---
 
 ## I. Requirements
@@ -216,3 +225,10 @@ Make note of the admin password. On Windows, you can use the snipping tool by pr
 	**a.** If you do not have another virtual machine set up, you cannot access the dashboard at the moment. If you do, open a browser and type the following into your URL bar:  
 		`https://<server_ip_here>` | as stated previously, we assigned `192.168.1.1` to the LAN segment, so you would enter `https://192.168.1.1`.  
 3. Wazuh is now installed on your Ubuntu Server VM and is ready to start logging events from agents. See the next document about deploying Wazuh Agents on endpoints you want to observe.
+
+---
+
+## VII. Security Considerations
+
+This setup does not consider server hardening, secure communications, or firewalls.
+
