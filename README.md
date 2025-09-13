@@ -10,6 +10,7 @@ The following documentation is for setting up Wazuh, an open-source SIEM tool, o
 - [V. Network Configuration (Optional)](#v-network-configuration-optional---if-using-a-default-gateway-in-lan-segment)
 - [VI. Wazuh Installation](#vi-wazuh-installation)
 - [VII. Security Considerations](#vii-security-considerations)
+- [VIII. Related Documentation](#viii-related-documentation)
 ---
 
 ## I. Requirements
@@ -250,3 +251,6 @@ Make note of the admin password. On Windows, you can use the snipping tool by pr
 
 This setup does not consider server hardening, secure communications, firewalls, etc. If you are using this guide for sensitive data or in a business/enterprise environment, consult with the necessary people to ensure that the server architecture is secure and the data remains confidential and available to those who require it.
 
+## VIII. Related Documentation
+- [Wazuh Agent Setup](docs/agent-setup.md)
+- [Wazuh Ruleset Guide](docs/ruleset-guide.md)
