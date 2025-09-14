@@ -4,7 +4,7 @@ For more information on Wazuh installations, you can view the official documenta
 
 ## I. Agent Installation
 
-1. Open a web browser and navigate to the Wazuh dashboard by typing in either: `https:<ubuntu-server-ip-here>`. If you followed the guide in the [README](README.md), you can access the dashboard using `https://192.168.1.1`.
+1. Open a web browser and navigate to the Wazuh dashboard by typing in: `https:<ubuntu-server-ip-here>`. If you followed the guide in the [README](README.md), you can access the dashboard using `https://192.168.1.1`.
 
 2. Use the username `admin` and the password you saved after the Wazuh installation on the Ubuntu Server for more details see section VI of the [README](README.md). Feel free to just save the password as `.txt` file or in the browser password manager for convenience. For optimal security, only store it in a trusted and secure password manager and do not save or place it anywhere that is easily accessible.
   
