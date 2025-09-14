@@ -25,3 +25,18 @@ https://github.com/user-attachments/assets/f55ffa02-77fb-4be5-9512-21275bce98b0
 7. Afterward, to start the agent service and register with the Wazuh manager (the Ubuntu VM we configured previously), run: `NET START WazuhSvc`
 
 Your Windows VM should now be a registered Wazuh agent and viewable on the Wazuh dashboard. Repeat step 3 to verify that the agent appears on the Summary screen.
+
+## II. Assessing Security Posture
+Now that we have an agent configured, we can start sifting through data and checking how secure our machine is.
+
+1. Using the sidebar, navigate to `Endpoint security` and selecting `Configuration Assessment`.
+   
+   **a.** The configuration assessment uses a default policy based off of the current operating system. For me, that is `CIS Microsoft Windows Server 2022 Benchmark v2.0.0`; CIS is the Center for Internet Security, which is a reputable and trustworthy organization that produces security standards and benchmarks such as these.
+   
+   **b.** The policy runs a multitude of checks to determine how secure our machine is; feel free to look through all of the checks. For reference, my score without any remediation or hardening strategies is 26%. In a later guide, we'll reach a point where we aren't failing miserably.
+
+2. Next, let's check if our machine has any vulnerabilities. Use the sidebar and navigate to `Threat intelligence` and select `Vulnerability Detection`.
+
+   **a.** Here, we can see all of the vulnerabilities in our system's current configuration. Feel free to look at the graphs and glean some information from them.
+   
+   **b.** At the top, click on the `Inventory` tab to see all of the vulnerabilities in a list. On the right-hand side, there are links to the CVEs associated with each vulnerability. In a later guide, we'll cover how we're going to remediate or mitigate these vulnerabilities.
