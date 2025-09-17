@@ -8,3 +8,4 @@ In this guide, we are going to harden Windows Server 2022 using Microsoft's Secu
 2. Download Microsoft's SCT for the initial baseline: https://www.microsoft.com/en-us/download/details.aspx?id=55319
 
 3. Install the PowerStig modules. Run in PowerShell: `Install-Module -Name PowerSTIG`
+
